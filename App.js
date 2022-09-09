@@ -13,6 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="auto" />
 
       <Text style={styles.textHeader}>Ticket Vault</Text>
 
@@ -30,13 +31,10 @@ export default function App() {
 
       <Text style={styles.textResult}>
         {(total === 0) ? (" ") : ("Ticket Costs: $" + total.toFixed(2))}
-      </Text>
+      </Text>      
 
-      
+      <Image source={concert} style={styles.image} />  
 
-      <Image source={concert} style={styles.image} /> 
- 
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -58,12 +56,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   input: { 
+    marginTop: 40,
+    fontSize: 23,
     textAlign: 'center',
     height: 40,
-    width: 250,
+    padding: 10,
+    fontWeight: 'bold',
     borderWidth: 1
   },
   button: {
+    marginTop: 40,
     margin: 10,
     backgroundColor: "#f98b88",
     padding: 10,
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
   }, 
   image: {
     marginTop: 90,
+    marginBottom: 10,
     width: 430, 
     height: 159
   }
